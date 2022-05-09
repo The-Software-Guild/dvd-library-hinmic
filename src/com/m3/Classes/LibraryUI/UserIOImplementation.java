@@ -43,7 +43,12 @@ public class UserIOImplementation implements UserIO {
         int input;
         do {
             print(prompt + ' ');
-            input = Integer.parseInt(inputReader.nextLine());
+            try {
+                input = Integer.parseInt(inputReader.nextLine());
+            } catch (NumberFormatException error) {
+                print("Not an integer!");
+                input = 0;
+            }
         } while (input <= min && input >= max);
 
         return input;

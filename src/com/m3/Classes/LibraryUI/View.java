@@ -23,9 +23,9 @@ public class View {
         userIO.print("  4. List all DVDs");
         userIO.print("  5. Search a DVD");
         userIO.print("  6. Load the DVD library from a file");
-        userIO.print("  7. Save the DVD Library to a file");
+        //userIO.print("  7. Save the DVD Library to a file");
 
-        return userIO.readInt("  Select the operation you wish to perform:", 0, 7);
+        return userIO.readInt("  Select the operation you wish to perform:", 0, 6);
     }
 
     public String operation1() {

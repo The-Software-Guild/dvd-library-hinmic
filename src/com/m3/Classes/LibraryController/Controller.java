@@ -91,7 +91,7 @@ public class Controller {
                         dvdLibrary.addDVD(dvd);
                     }
                     break;
-                case 7:
+                default:
                     fileName = session.operation7();
                     String saveInfo;
                     List<String> saveList = new ArrayList<String>();
@@ -104,10 +104,8 @@ public class Controller {
                         saveList.add(saveInfo);
                     }
                     session.operation7(fileName, saveList);
-                    break;
-                default:
-                    System.out.println("bug");
+                    System.out.println("Session ends.");
             }
-        } while (input > 0);
+        } while (input > 0 && input < 7);
     }
 }
